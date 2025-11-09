@@ -1,0 +1,32 @@
+name: Pipeline da Nayara 
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: echo "Instalando dependências fictícias..."
+
+      - name: Testar aplicação
+        run: echo "Executando testes automatizados..."
+
+      - name: Implantação simulada
+        run: echo "Deploy concluído com sucesso "
+
+      - name: Mostrar autor
+        run: echo "Pipeline criado por Nayara Eufrásio 💻"
