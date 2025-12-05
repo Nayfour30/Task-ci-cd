@@ -17,3 +17,4 @@ O pipeline automatiza etapas de:
 Pipeline criado por **Nayara Eufrásio**
 
 Teste do workflow TYPE.
+Alteração de teste para pull request.
