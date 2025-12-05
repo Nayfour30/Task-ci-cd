@@ -15,3 +15,5 @@ O pipeline automatiza etapas de:
 
 ##  Autor(a)
 Pipeline criado por **Nayara Eufrásio**
+
+Teste do workflow TYPE.
