@@ -1,0 +1,31 @@
+name: GitHub Actions - Workflow Dispatch choice Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Escolha a tag"
+        type: choice
+        required: true
+        default: tag1
+        options:
+          - tag1
+          - tag2
+          - tag3
+
+jobs:
+  show-choice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar escolha
+        run: |
+          echo "Tag escolhida: ${{ github.event.inputs.tag }}"
+      - name: Exemplo de caminho condicional
+        run: |
+          if [ "${{ github.event.inputs.tag }}" = "tag1" ]; then
+            echo "Executando caminho da tag1"
+          elif [ "${{ github.event.inputs.tag }}" = "tag2" ]; then
+            echo "Executando caminho da tag2"
+          else
+            echo "Executando caminho da tag3"
+          fi
