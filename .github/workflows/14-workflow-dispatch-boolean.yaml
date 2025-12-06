@@ -1,0 +1,25 @@
+name: GitHub Actions - Workflow Dispatch boolean Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: "Marque para TRUE ou deixe desmarcado para FALSE"
+        type: boolean
+        required: true
+        default: false
+
+jobs:
+  show-boolean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar escolha booleana
+        run: |
+          echo "Publicar: ${{ github.event.inputs.publicar }}"
+      - name: Decisão de publicação
+        run: |
+          if [ "${{ github.event.inputs.publicar }}" = "true" ]; then
+            echo "Você marcou TRUE. Publicando..."
+          else
+            echo "Você deixou FALSE. Não publicar."
+          fi
