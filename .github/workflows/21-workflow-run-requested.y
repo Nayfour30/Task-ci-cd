@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Comentário
-        run: echo "Workflow run Completed foi trigado!"
+        run: echo "Workflow run Requested foi trigado!"
